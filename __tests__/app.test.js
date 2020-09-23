@@ -13,7 +13,7 @@ describe('createResponse', () => {
   it('returns the word hi in plain text via POST', async() => {
     const response = await request(app)
       .post('/echo')
-      .send({ body: 'hi', contentType: 'text/html', status: '200 OK' });
+      .send('hi');
 
     expect(response.text)
       .toEqual('hi');
